@@ -192,26 +192,77 @@ section h2 {
 .certificates-grid button:hover {
   background-color: #007BFF;
 }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background: url('background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: left;
+  gap: 20px;
+}
+
+.hero-content {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+/* Responsive: For mobile screens */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    background-position: top center;
+  }
+
+  .hero-content, .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
   </style>
 </head>
 <body>
-  <div class="hero">
-  <a href="resume.pdf" download class="download-resume-btn" title="Download Resume">
-    <i class="fas fa-download"></i> Resume
-  </a>
-  <h1>Danish M</h1>
-  <p>B.Tech - AI & Data Science Student</p>
-  <div class="buttons">
-    <a href="mailto:727824tuad034@skct.edu.in">Hire Me</a>
+  <section class="hero">
+  <div class="hero-content">
+    <h1>Hello, I'm Danish M</h1>
+    <p>Aspiring AI Developer | Portfolio</p>
+    <div class="hero-buttons">
+      <button class="hire-button">Hire Me</button>
+      <div class="socials">
+        <!-- Your social buttons go here -->
+        <a href="https://github.com/danish2323" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/..." target="_blank">LinkedIn</a>
+        <a href="https://wa.me/91..." target="_blank">WhatsApp</a>
+      </div>
+    </div>
   </div>
-  <div class="socials">
-    <a href="https://linkedin.com/in/danish-m-a50325326"><i class="fab fa-linkedin"></i></a>
-    <a href="https://wa.me/919940768187"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:727824tuad034@skct.edu.in"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.instagram.com/mr.danixh_?igsh=NWJoOGwwYWx2ZTFw"><i class="fab fa-instagram"></i></a>
+  <div class="hero-image">
+    <img src="danish.jpg" alt="Danish M">
   </div>
-</div>
-</div>
+</section>
   <nav>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
